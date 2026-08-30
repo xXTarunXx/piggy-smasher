@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48" height="48">
+  <!-- Outer Coin Edge -->
+  <circle cx="24" cy="24" r="22" fill="#E5A912" stroke="#B87B00" stroke-width="2"/>
+  <!-- Inner Coin Body -->
+  <circle cx="24" cy="24" r="18" fill="#FFD54F" stroke="#E5A912" stroke-width="2"/>
+  <!-- Star / Symbol -->
+  <polygon points="24,12 27,20 35,21 29,26 31,34 24,29 17,34 19,26 13,21 21,20" fill="#FFE082" stroke="#D49000" stroke-width="1"/>
+  <!-- Specular highlight -->
+  <ellipse cx="18" cy="16" rx="5" ry="3" transform="rotate(-30 18 16)" fill="#FFF9C4" opacity="0.6"/>
+</svg>

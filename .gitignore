@@ -1,0 +1,12 @@
+# Godot 4+ specific ignores
+.godot/
+
+# Large binaries & build artifacts
+builds/desktop/*.exe
+builds/desktop/*.pck
+
+# Keep folder structure
+!builds/web/.gitkeep
+!builds/desktop/.gitkeep
+!assets/audio/.gitkeep
+!assets/fonts/.gitkeep

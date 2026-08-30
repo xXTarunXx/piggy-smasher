@@ -1,0 +1,213 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://scripts/Shop.gd" id="1_shop_script"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_panel"]
+bg_color = Color(0.12, 0.13, 0.18, 0.96)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.3, 0.35, 0.5, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[node name="Shop" type="Control"]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -230.0
+offset_top = -240.0
+offset_right = 230.0
+offset_bottom = 240.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_shop_script")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_panel")
+
+[node name="MarginContainer" type="MarginContainer" parent="Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 16
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="HeaderHBox" type="HBoxContainer" parent="Panel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="TitleLabel" type="Label" parent="Panel/MarginContainer/VBoxContainer/HeaderHBox"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 22
+text = "Upgrade Shop"
+
+[node name="CloseButton" type="Button" parent="Panel/MarginContainer/VBoxContainer/HeaderHBox"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+text = "✕"
+
+[node name="HSeparator" type="HSeparator" parent="Panel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="DamageRow" type="HBoxContainer" parent="Panel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="VBox" type="VBoxContainer" parent="Panel/MarginContainer/VBoxContainer/DamageRow"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="Panel/MarginContainer/VBoxContainer/DamageRow/VBox"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 15
+text = "Hammer Power"
+
+[node name="DamageInfoLabel" type="Label" parent="Panel/MarginContainer/VBoxContainer/DamageRow/VBox"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_color = Color(0.7, 0.75, 0.85, 1)
+theme_override_font_sizes/font_size = 12
+text = "Current: 1 Dmg (+1)"
+
+[node name="DamageCostLabel" type="Label" parent="Panel/MarginContainer/VBoxContainer/DamageRow"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(80, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.85, 0.3, 1)
+theme_override_font_sizes/font_size = 14
+text = "8 Coins"
+horizontal_alignment = 2
+
+[node name="DamageBuyButton" type="Button" parent="Panel/MarginContainer/VBoxContainer/DamageRow"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(85, 32)
+layout_mode = 2
+text = "Upgrade"
+
+[node name="AutoRow" type="HBoxContainer" parent="Panel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="VBox" type="VBoxContainer" parent="Panel/MarginContainer/VBoxContainer/AutoRow"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="Panel/MarginContainer/VBoxContainer/AutoRow/VBox"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 15
+text = "Auto-Whack"
+
+[node name="AutoInfoLabel" type="Label" parent="Panel/MarginContainer/VBoxContainer/AutoRow/VBox"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_color = Color(0.7, 0.75, 0.85, 1)
+theme_override_font_sizes/font_size = 12
+text = "Locked"
+
+[node name="AutoCostLabel" type="Label" parent="Panel/MarginContainer/VBoxContainer/AutoRow"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(80, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.85, 0.3, 1)
+theme_override_font_sizes/font_size = 14
+text = "20 Coins"
+horizontal_alignment = 2
+
+[node name="AutoBuyButton" type="Button" parent="Panel/MarginContainer/VBoxContainer/AutoRow"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(85, 32)
+layout_mode = 2
+text = "Unlock"
+
+[node name="CritRow" type="HBoxContainer" parent="Panel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="VBox" type="VBoxContainer" parent="Panel/MarginContainer/VBoxContainer/CritRow"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="Panel/MarginContainer/VBoxContainer/CritRow/VBox"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 15
+text = "Lucky Strike"
+
+[node name="CritInfoLabel" type="Label" parent="Panel/MarginContainer/VBoxContainer/CritRow/VBox"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_color = Color(0.7, 0.75, 0.85, 1)
+theme_override_font_sizes/font_size = 12
+text = "Current: 0% (+15%)"
+
+[node name="CritCostLabel" type="Label" parent="Panel/MarginContainer/VBoxContainer/CritRow"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(80, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.85, 0.3, 1)
+theme_override_font_sizes/font_size = 14
+text = "12 Coins"
+horizontal_alignment = 2
+
+[node name="CritBuyButton" type="Button" parent="Panel/MarginContainer/VBoxContainer/CritRow"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(85, 32)
+layout_mode = 2
+text = "Upgrade"
+
+[node name="RadiusRow" type="HBoxContainer" parent="Panel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="VBox" type="VBoxContainer" parent="Panel/MarginContainer/VBoxContainer/RadiusRow"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="Panel/MarginContainer/VBoxContainer/RadiusRow/VBox"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 15
+text = "Smash Radius"
+
+[node name="RadiusInfoLabel" type="Label" parent="Panel/MarginContainer/VBoxContainer/RadiusRow/VBox"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_color = Color(0.7, 0.75, 0.85, 1)
+theme_override_font_sizes/font_size = 12
+text = "Direct Hit (Unlock AOE)"
+
+[node name="RadiusCostLabel" type="Label" parent="Panel/MarginContainer/VBoxContainer/RadiusRow"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(80, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.85, 0.3, 1)
+theme_override_font_sizes/font_size = 14
+text = "18 Coins"
+horizontal_alignment = 2
+
+[node name="RadiusBuyButton" type="Button" parent="Panel/MarginContainer/VBoxContainer/RadiusRow"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(85, 32)
+layout_mode = 2
+text = "Unlock"

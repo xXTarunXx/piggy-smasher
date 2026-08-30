@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <!-- Body -->
+  <ellipse cx="64" cy="68" rx="44" ry="34" fill="#FF8DA1" stroke="#D85C74" stroke-width="4"/>
+  <!-- Ears -->
+  <polygon points="40,40 48,22 58,38" fill="#FFAEC0" stroke="#D85C74" stroke-width="3"/>
+  <polygon points="76,38 86,22 94,40" fill="#FFAEC0" stroke="#D85C74" stroke-width="3"/>
+  <!-- Snout -->
+  <ellipse cx="64" cy="74" rx="16" ry="12" fill="#FFAEC0" stroke="#D85C74" stroke-width="3"/>
+  <circle cx="58" cy="74" r="3" fill="#8B2E42"/>
+  <circle cx="70" cy="74" r="3" fill="#8B2E42"/>
+  <!-- Eyes -->
+  <circle cx="48" cy="56" r="4.5" fill="#2C2C2C"/>
+  <circle cx="46" cy="54" r="1.5" fill="#FFFFFF"/>
+  <circle cx="80" cy="56" r="4.5" fill="#2C2C2C"/>
+  <circle cx="78" cy="54" r="1.5" fill="#FFFFFF"/>
+  <!-- Feet -->
+  <rect x="42" y="96" width="12" height="10" rx="4" fill="#E86E85"/>
+  <rect x="74" y="96" width="12" height="10" rx="4" fill="#E86E85"/>
+  <!-- Coin Slot -->
+  <rect x="54" y="36" width="20" height="4" rx="2" fill="#8B2E42"/>
+  <!-- Tail -->
+  <path d="M 22 66 Q 14 62 16 54 Q 22 50 20 60" fill="none" stroke="#D85C74" stroke-width="3" stroke-linecap="round"/>
+</svg>
